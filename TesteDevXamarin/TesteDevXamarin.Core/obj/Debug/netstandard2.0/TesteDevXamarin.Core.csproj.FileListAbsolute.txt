@@ -1,0 +1,8 @@
+D:\DAVI\PROJETOS\repos\Testes\TesteDevXamarin\TesteDevXamarin.Core\obj\Debug\netstandard2.0\TesteDevXamarin.Core.csprojAssemblyReference.cache
+D:\DAVI\PROJETOS\repos\Testes\TesteDevXamarin\TesteDevXamarin.Core\obj\Debug\netstandard2.0\TesteDevXamarin.Core.AssemblyInfoInputs.cache
+D:\DAVI\PROJETOS\repos\Testes\TesteDevXamarin\TesteDevXamarin.Core\obj\Debug\netstandard2.0\TesteDevXamarin.Core.AssemblyInfo.cs
+D:\DAVI\PROJETOS\repos\Testes\TesteDevXamarin\TesteDevXamarin.Core\bin\Debug\netstandard2.0\TesteDevXamarin.Core.deps.json
+D:\DAVI\PROJETOS\repos\Testes\TesteDevXamarin\TesteDevXamarin.Core\bin\Debug\netstandard2.0\TesteDevXamarin.Core.dll
+D:\DAVI\PROJETOS\repos\Testes\TesteDevXamarin\TesteDevXamarin.Core\bin\Debug\netstandard2.0\TesteDevXamarin.Core.pdb
+D:\DAVI\PROJETOS\repos\Testes\TesteDevXamarin\TesteDevXamarin.Core\obj\Debug\netstandard2.0\TesteDevXamarin.Core.dll
+D:\DAVI\PROJETOS\repos\Testes\TesteDevXamarin\TesteDevXamarin.Core\obj\Debug\netstandard2.0\TesteDevXamarin.Core.pdb
