@@ -1,21 +1,29 @@
 ﻿using MvvmCross.Forms.Views;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using TesteDevXamarin.Core.Models.Domain;
 using TesteDevXamarin.Core.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace TesteDevXamarin.Forms.UI.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class FirstListStatesView : MvxContentPage<FirstListStatesViewModel>
+  
+    public partial class FirstListStatesView : MvxContentPage<FirstStateListViewModel>
     {
         public FirstListStatesView()
         {
             InitializeComponent();
+        }
+
+        private void searchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            statesListView.IsVisible = false;
+            searchResults.IsVisible = true;
         }
     }
 }
