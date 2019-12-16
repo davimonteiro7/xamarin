@@ -15,6 +15,6 @@ namespace TesteDevXamarin.Core.Models.Domain
         public string Sigla { get; set; }
         public string Capital { get; set; }
         public string FlagUrl { get; set; }
-        public Region Region { get; set; }
+        public _Region Region { get; set; }
     }
 }

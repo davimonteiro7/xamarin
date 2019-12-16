@@ -30,7 +30,7 @@ namespace TesteDevXamarin.Core.Models.Domain.Services
                     Sigla = state.fields.Sigla,
                     Capital = state.fields.Capital,
                     FlagUrl = state.fields.Attachments.FirstOrDefault().thumbnails.large.url,
-                    Region = new Region { Name = state.fields.Regiao }
+                    Region = new _Region { Name = state.fields.Regiao }
                 });
             }
             return states;
