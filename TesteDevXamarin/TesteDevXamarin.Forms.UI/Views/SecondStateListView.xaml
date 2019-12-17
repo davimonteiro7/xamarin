@@ -7,7 +7,8 @@
             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             mc:Ignorable="d"
-            x:Class="TesteDevXamarin.Forms.UI.Views.SecondStateListView">
+            x:Class="TesteDevXamarin.Forms.UI.Views.SecondStateListView"
+            Title="ESTADOS/REGIÃO">
 
     <ListView ItemsSource="{Binding Regions}" 
                   HorizontalOptions="StartAndExpand"
@@ -19,7 +20,7 @@
                 <ViewCell >
                     <StackLayout>
                         <StackLayout Orientation="Vertical">
-                            <Label Text="{Binding Name}"/>
+                            <Label Text="{Binding Name}" HorizontalOptions="Center" FontSize="Large"/>
                         </StackLayout>
                         <StackLayout Orientation="Vertical">
                             <ListView ItemsSource="{Binding States}"

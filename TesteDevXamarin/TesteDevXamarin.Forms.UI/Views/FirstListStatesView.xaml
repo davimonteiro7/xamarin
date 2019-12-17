@@ -4,10 +4,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
         xmlns:viewModels="clr-namespace:TesteDevXamarin.Core.ViewModels;assembly=TesteDevXamarin.Core"
-        x:Class="TesteDevXamarin.Forms.UI.Views.FirstListStatesView">
+        x:Class="TesteDevXamarin.Forms.UI.Views.FirstListStatesView"
+        Title="LISTA DE ESTADOS">
+        
     <ContentPage.Content>
         <StackLayout Margin="10">
-            <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
                 <Button Text="Estados/Região" Command="{Binding NavigateToSecondCommand}"/>
                 <Button Text="Estados Gravados" Command="{Binding NavigateToThirdCommand}"/>
             </StackLayout>

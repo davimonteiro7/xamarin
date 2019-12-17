@@ -3,20 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TesteDevXamarin.Core.Models.Data.JSONMapping;
-using TesteDevXamarin.Core.Models.Domain.Repositories;
 
 namespace TesteDevXamarin.Core.Models.Domain.Services
 {
     public class StateService : IStateService
     {
         public ImportStates importedStates;
-        private readonly IStateRepository _stateRepository;
-        public StateService(IStateRepository stateRepository)
+        public StateService()
         {
-            _stateRepository = stateRepository;
             importedStates = new ImportStates();
         }
         public ObservableCollection<State> FetchStates()

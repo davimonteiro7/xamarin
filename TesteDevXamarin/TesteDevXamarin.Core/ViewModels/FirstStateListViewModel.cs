@@ -7,7 +7,6 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using MvvmCross.Navigation;
 using MvvmCross.Commands;
-using System.Linq;
 
 namespace TesteDevXamarin.Core.ViewModels
 {

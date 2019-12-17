@@ -7,7 +7,8 @@
              xmlns:viewModels="clr-namespace:TesteDevXamarin.Core.ViewModels;assembly=TesteDevXamarin.Core"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="TesteDevXamarin.Forms.UI.Views.ThirdStateListView">
+             x:Class="TesteDevXamarin.Forms.UI.Views.ThirdStateListView"
+             Title="ESTADOS GRAVADOS">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
@@ -17,7 +18,7 @@
                      Clicked="RecordStatesButton_Clicked"/>    
             </StackLayout>
             <StackLayout>
-                <ListView x:Name="LocalStatesList"
+                <ListView x:Name="LocalStatesList" Margin="20"
                       ItemsSource="{Binding LocalStates}" IsVisible="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
