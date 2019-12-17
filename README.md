@@ -1,4 +1,4 @@
-## Teste Desenvolvedor Xamarin --.
+## Teste Desenvolvedor Xamarin.
 
  Este aplicativo implementa funções para importar, visualizar e gravar estados brasileiros, com o intuito de apresentar conhecimento
  técnico em desenvolvimento movel. Este app é formado por três paginas: 
