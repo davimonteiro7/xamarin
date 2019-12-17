@@ -7,6 +7,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using MvvmCross.Navigation;
 using MvvmCross.Commands;
+using System.Linq;
 
 namespace TesteDevXamarin.Core.ViewModels
 {
@@ -22,11 +23,15 @@ namespace TesteDevXamarin.Core.ViewModels
 
             States = _stateService.FetchStates();
 
-            NavigateCommand = new MvxAsyncCommand(() =>
+            NavigateToSecondCommand = new MvxAsyncCommand(() =>
                 _navigationService.Navigate<SecondStateListViewModel, ObservableCollection<State>>(States));
+
+            NavigateToThirdCommand = new MvxAsyncCommand(() =>
+                _navigationService.Navigate<ThirdStateListViewModel, ObservableCollection<State>>(States));
         }
 
-        public IMvxAsyncCommand NavigateCommand { get; private set; }
+        public IMvxAsyncCommand NavigateToSecondCommand { get; private set; }
+        public IMvxAsyncCommand NavigateToThirdCommand { get; private set; }
         public ICommand PerformSearch => new Command<string>((string query) =>
         {
             SearchResults = _stateService.SearchState(query);
@@ -58,16 +63,14 @@ namespace TesteDevXamarin.Core.ViewModels
                 RaisePropertyChanged();
             }
         }
-
-        
         public override void ViewAppeared()
         {
             base.ViewAppeared();      
         }
-
         public override Task Initialize()
         {
             return base.Initialize();
+            
         }
     }
 }

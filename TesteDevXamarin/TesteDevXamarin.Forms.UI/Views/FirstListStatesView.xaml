@@ -7,8 +7,10 @@
         x:Class="TesteDevXamarin.Forms.UI.Views.FirstListStatesView">
     <ContentPage.Content>
         <StackLayout Margin="10">
-            <Button Text="Estados/Região" Command="{Binding NavigateCommand}">
-            </Button>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Estados/Região" Command="{Binding NavigateToSecondCommand}"/>
+                <Button Text="Estados Gravados" Command="{Binding NavigateToThirdCommand}"/>
+            </StackLayout>
             <SearchBar x:Name="searchBar"
                        Placeholder="estado ou capital"
                        SearchCommand="{Binding PerformSearch}"

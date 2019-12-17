@@ -8,6 +8,8 @@ using MvvmCross.Forms.Platforms.Android.Core;
 using TesteDevXamarin.Core;
 using TesteDevXamarin.Forms.UI;
 using Android.Content.PM;
+using System;
+using Realms;
 
 namespace TesteDevXamarin.Forms.Droid
 {
@@ -26,4 +28,6 @@ namespace TesteDevXamarin.Forms.Droid
             base.OnCreate(bundle);
         }
     }
+
 }
+    

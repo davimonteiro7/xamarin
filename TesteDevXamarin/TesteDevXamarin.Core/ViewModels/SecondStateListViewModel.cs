@@ -16,7 +16,8 @@ namespace TesteDevXamarin.Core.ViewModels
     public class SecondStateListViewModel : MvxViewModel <ObservableCollection<State>>
     {
         
-        public ObservableCollection<State> States { get; set; } 
+        public ObservableCollection<State> States { get; set; }
+        
         private ObservableCollection<_Region> _regions;
         public ObservableCollection<_Region> Regions {
             get {
@@ -28,34 +29,32 @@ namespace TesteDevXamarin.Core.ViewModels
             }
         }
 
-       
+        public override void Prepare(ObservableCollection<State> states)
+        {
+            States = states;
+            GetRegions();
+        }
+
         public void GetRegions()
         {
-            Regions = new ObservableCollection<_Region>();
+            Regions = new ObservableCollection<_Region>();            
             foreach (var state in States)
             {
                 if (!Regions.Any(r => r.Name == state.Region.Name))
                 {
-                    Regions.Add(new _Region()
+                    var statesByRegion = GetStatesByRegion(state.Region.Name);
+                    Regions.Add(new _Region(statesByRegion)
                     { 
-                        Name = state.Region.Name
+                        Name = state.Region.Name,
                     });
                 }
             }
         }
 
-        public void FillRegions()
+        private List<State> GetStatesByRegion(string regionName)
         {
-            foreach (var region in Regions)
-            {
-                region.SetStatesOnRegion(States.ToList());
-            }
-        }
-        public override void Prepare(ObservableCollection<State> states)
-        {
-            States = states;
-            GetRegions();
-            FillRegions();
+            var states = States.Where(s => s.Region.Name == regionName).ToList();
+            return states;
         }
     }
 }

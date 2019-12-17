@@ -1,15 +1,14 @@
-﻿using System;
+﻿using Realms;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace TesteDevXamarin.Core.Models.Domain
 {
-    public class State
+    public class State : RealmObject
     {
-        public State()
-        {
-            FlagUrl = null;
-        }
+        public State() {}
+        [PrimaryKey]
         public string Id { get; set; }
         public string Name { get; set; }
         public string Sigla { get; set; }

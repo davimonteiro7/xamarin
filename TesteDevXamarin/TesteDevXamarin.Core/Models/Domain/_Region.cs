@@ -1,34 +1,19 @@
-﻿using System;
+﻿using Realms;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace TesteDevXamarin.Core.Models.Domain
 {
-    public class _Region
+    public class _Region : RealmObject
     {
         public string Name { get; set; }
-        public List<State> States { get; set; }
+        public IList<State> States { get; }
+        public _Region() {}
 
-        public void SetStatesOnRegion(List<State> states)
+        public _Region(List<State> states)
         {
-            States = new List<State>();
-            foreach (var state in states)
-            {
-                if (state.Region.Name == this.Name)
-                {
-                    try
-                    {
-                        States.Add(state);
-                    }
-                    catch (Exception ex)
-                    {
-
-                        throw ex;
-                    }
-                  
-                }
-            }
+            States = states;
         }
-
     }
 }   

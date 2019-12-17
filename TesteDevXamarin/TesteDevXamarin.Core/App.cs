@@ -1,10 +1,9 @@
 ﻿using MvvmCross;
 using MvvmCross.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using TesteDevXamarin.Core.Models.Domain.Repositories;
 using TesteDevXamarin.Core.Models.Domain.Services;
 using TesteDevXamarin.Core.ViewModels;
+using TTesteDevXamarin.Core.Models.Data.Persistence.Repositories;
 
 namespace TesteDevXamarin.Core
 {
@@ -13,6 +12,8 @@ namespace TesteDevXamarin.Core
         public override void Initialize()
         {
             Mvx.IoCProvider.RegisterType<IStateService, StateService>();
+            Mvx.IoCProvider.RegisterType<IStateRepository, StateRepository>();
+            
             RegisterAppStart<FirstStateListViewModel>();
         }
     }

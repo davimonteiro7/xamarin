@@ -57,6 +57,10 @@
               "target": "Package",
               "version": "[12.0.3, )"
             },
+            "Realm": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[4.4.0.991265, )"
@@ -124,6 +128,10 @@
             "MvvmCross.Forms": {
               "target": "Package",
               "version": "[6.4.1, )"
+            },
+            "Realm": {
+              "target": "Package",
+              "version": "[4.2.0, )"
             },
             "Xamarin.Android.Support.Core.Utils": {
               "target": "Package",
